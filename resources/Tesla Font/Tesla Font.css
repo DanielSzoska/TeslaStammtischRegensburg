@@ -1,0 +1,7 @@
+@font-face {
+    font-display: swap;
+    font-family: 'TESLA';
+    font-style: normal;
+    font-weight: 100;
+    src: url('/resources/Tesla Font/TESLA.ttf') format('truetype');
+}

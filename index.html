@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="format-detection" content="telephone=no" />
+
+        <!-- Preload Background Image -->
+        <link rel="preload" as="image" href="/background.avif" />
+        <link rel="preload" as="image" href="/background.webp" />
+        <link rel="preload" as="image" href="/background.jpg" />
+
+        <!-- Preload Logo -->
+        <link rel="preload" as="image" href="/logo.svg" />
+
+        <!-- PWA -->
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-title" content="Tesla Stammtisch Regensburg" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <!-- Open Graph Tags for Social Media Embeds -->
+        <meta property="og:site_name" content="Tesla Stammtisch Regensburg" />
+        <meta property="og:title" content="Tesla Stammtisch Regensburg" />
+        <meta property="og:description" content="Der Regensburger Tesla Stammtisch" />
+        <meta property="og:url" content="https://tesla-stammtisch-regensburg.de/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="de_DE" />
+        <meta property="og:image" content="https://tesla-stammtisch-regensburg.de/background.jpg" />
+        <meta property="og:image:secure_url" content="https://tesla-stammtisch-regensburg.de/background.jpg" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:alt" content="Tesla Stammtisch Regensburg" />
+
+        <!-- Twitter Embeds -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="tesla-stammtisch-regensburg.de" />
+        <meta property="twitter:url" content="https://tesla-stammtisch-regensburg.de" />
+        <meta name="twitter:title" content="Tesla Stammtisch Regensburg" />
+        <meta name="twitter:description" content="Der Regensburger Tesla Stammtisch" />
+        <meta name="twitter:image" content="https://tesla-stammtisch-regensburg.de/background.jpg" />
+
+        <!-- Icons -->
+        <link rel="icon" href="/favicon.ico" sizes="48x48" />
+        <link rel="icon" href="/logo.svg" sizes="any" type="image/svg+xml" />
+        <link rel="icon" sizes="192x192" href="/pwa-192x192.png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png" />
+
+        <!-- Material UI -->
+        <link rel="stylesheet" type="text/css" href="/resources/Roboto/roboto.css" />
+        <link rel="stylesheet" type="text/css" href="/resources/Material-Icons/material-icons.css" />
+
+        <!-- Tesla Font -->
+        <link rel="stylesheet" type="text/css" href="/resources/Tesla%20Font/Tesla%20Font.css" />
+
+        <!-- Prevent "Dark Reader" Browser Extension -->
+        <meta name="darkreader-lock" />
+
+        <title lang="de">Tesla Stammtisch Regensburg</title>
+        <meta lang="de" name="description"  content="Der Regensburger Tesla Stammtisch" data-react-helmet="true" data-rh="true" />
+        <meta http-equiv="Content-Language" content="de" />
+    </head>
+
+    <body style="background-color: #121212">
+        <div id="root"></div>
+
+        <script type="module" src="/src/index.tsx"></script>
+
+        <noscript>
+            <span data-nosnippet>Diese Webseite benötigt JavaScript!</span>
+        </noscript>
+    </body>
+</html>

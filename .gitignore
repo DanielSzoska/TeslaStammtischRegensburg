@@ -1,0 +1,40 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+.swc/
+node_modules
+dist
+dist-ssr
+*.local
+/vite.config.d.ts
+/vite.config.js
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.idea/
+*.iml
+
+# Vite PWA
+public/apple-touch-icon-180x180.png
+public/maskable-icon-512x512.png
+public/pwa-*.png
+public/favicon.ico
+public/favicon.svg
+/manifest.d.ts
+/manifest.js
+/pwa-assets.config.d.ts
+/pwa-assets.config.js
