@@ -23,13 +23,12 @@ DTSTART:19701025T030000
 RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
-
 BEGIN:VEVENT
 UID:stammtisch-august-2025@tesla-stammtisch-regensburg.de
 DTSTAMP:20250713T120000Z
 SUMMARY:Tesla Stammtisch
 DESCRIPTION:Monatlicher Stammtisch
-LOCATION:Restaurant Meilenstein\nJunkersstraße 3\n93055 Regensburg\nDeutschland
+LOCATION:Restaurant Meilenstein\nJunkersstraße 3\n93055 Regensburg
 GEO:48.9950241;12.1506653
 ORGANIZER;CN=Tesla Stammtisch:mailto:info@tesla-stammtisch-regensburg.de
 DTSTART;TZID=Europe/Berlin:20250808T180000
@@ -45,13 +44,12 @@ DESCRIPTION:Morgen Stammtisch
 ACTION:DISPLAY
 END:VALARM
 END:VEVENT
-
 BEGIN:VEVENT
 UID:stammtisch-september-2025@tesla-stammtisch-regensburg.de
 DTSTAMP:20250713T120000Z
 SUMMARY:Tesla Stammtisch
 DESCRIPTION:Monatlicher Stammtisch
-LOCATION:Restaurant Meilenstein\nJunkersstraße 3\n93055 Regensburg\nDeutschland
+LOCATION:Restaurant Meilenstein\nJunkersstraße 3\n93055 Regensburg
 GEO:48.9950241;12.1506653
 ORGANIZER;CN=Tesla Stammtisch:mailto:info@tesla-stammtisch-regensburg.de
 DTSTART;TZID=Europe/Berlin:20250905T180000
@@ -67,13 +65,12 @@ DESCRIPTION:Morgen Stammtisch
 ACTION:DISPLAY
 END:VALARM
 END:VEVENT
-
 BEGIN:VEVENT
 UID:stammtisch-oktober-2025@tesla-stammtisch-regensburg.de
 DTSTAMP:20250713T120000Z
 SUMMARY:Tesla Stammtisch
 DESCRIPTION:Monatlicher Stammtisch
-LOCATION:Restaurant Meilenstein\nJunkersstraße 3\n93055 Regensburg\nDeutschland
+LOCATION:Restaurant Meilenstein\nJunkersstraße 3\n93055 Regensburg
 GEO:48.9950241;12.1506653
 ORGANIZER;CN=Tesla Stammtisch:mailto:info@tesla-stammtisch-regensburg.de
 DTSTART;TZID=Europe/Berlin:20251010T180000
@@ -89,13 +86,12 @@ DESCRIPTION:Morgen Stammtisch
 ACTION:DISPLAY
 END:VALARM
 END:VEVENT
-
 BEGIN:VEVENT
 UID:stammtisch-november-2025@tesla-stammtisch-regensburg.de
 DTSTAMP:20250713T120000Z
 SUMMARY:Tesla Stammtisch
 DESCRIPTION:Monatlicher Stammtisch
-LOCATION:Restaurant Meilenstein\nJunkersstraße 3\n93055 Regensburg\nDeutschland
+LOCATION:Restaurant Meilenstein\nJunkersstraße 3\n93055 Regensburg
 GEO:48.9950241;12.1506653
 ORGANIZER;CN=Tesla Stammtisch:mailto:info@tesla-stammtisch-regensburg.de
 DTSTART;TZID=Europe/Berlin:20251107T180000
@@ -111,13 +107,12 @@ DESCRIPTION:Morgen Stammtisch
 ACTION:DISPLAY
 END:VALARM
 END:VEVENT
-
 BEGIN:VEVENT
 UID:stammtisch-dezember-2025@tesla-stammtisch-regensburg.de
 DTSTAMP:20250713T120000Z
 SUMMARY:Tesla Stammtisch
 DESCRIPTION:Monatlicher Stammtisch
-LOCATION:Restaurant Meilenstein\nJunkersstraße 3\n93055 Regensburg\nDeutschland
+LOCATION:Restaurant Meilenstein\nJunkersstraße 3\n93055 Regensburg
 GEO:48.9950241;12.1506653
 ORGANIZER;CN=Tesla Stammtisch:mailto:info@tesla-stammtisch-regensburg.de
 DTSTART;TZID=Europe/Berlin:20251205T180000
