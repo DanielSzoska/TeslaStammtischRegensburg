@@ -19,7 +19,8 @@ export default defineConfig({
 				"*.ico",
 				"*.jpg",
 				"*.ttf",
-				"*.woff2"
+				"*.woff2",
+				"posts/*.md"
 			],
 			includeManifestIcons: true,
 			registerType: "autoUpdate",
@@ -33,11 +34,12 @@ export default defineConfig({
 					/^\/sitemap\.xml$/,
 					/^\/robots\.txt$/,
 					/^\/manifest\.webmanifest$/,
+					/^\/posts\/.*\.md$/,
 					/^\/[^/]*\.(?:svg|avif|webp|png|jpg|jpeg|ico)$/i
 				],
 				cleanupOutdatedCaches: true,
 				globPatterns: [
-					"**/*.{js,css,html,ico,png,jpg,jpeg,svg,avif,webp,ttf,woff2}"
+					"**/*.{js,css,html,ico,png,jpg,jpeg,svg,avif,webp,ttf,woff2,md}"
 				]
 			}
 		}),
