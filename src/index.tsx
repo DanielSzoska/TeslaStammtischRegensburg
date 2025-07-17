@@ -1,6 +1,4 @@
 import Box from "@mui/material/Box"
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools"
 import { StrictMode } from "react"
 import { createRoot } from "react-dom/client"
 import { Helmet } from "react-helmet"
@@ -27,42 +25,30 @@ registerSW({
 const container = document.getElementById("root")!
 const root = createRoot(container)
 
-const queryClient = new QueryClient({
-	defaultOptions: {
-		queries: {
-			staleTime: 1000 * 60 * 1
-		}
-	}
-})
-
 root.render(
 	<StrictMode>
-		<QueryClientProvider client={queryClient}>
-			<ReactQueryDevtools initialIsOpen={false} />
+		<Helmet
+			titleTemplate="%s | Tesla Stammtisch Regensburg"
+			htmlAttributes={{ lang: "de" }}
+			titleAttributes={{ lang: "de" }}
+		/>
 
-			<Helmet
-				titleTemplate="%s | Tesla Stammtisch Regensburg"
-				htmlAttributes={{ lang: "de" }}
-				titleAttributes={{ lang: "de" }}
-			/>
+		<SEO />
 
-			<SEO />
+		<ThemeProvider>
+			<BrowserRouter>
+				<Box id="header">
+					<ViewHeader />
+				</Box>
 
-			<ThemeProvider>
-				<BrowserRouter>
-					<Box id="header">
-						<ViewHeader />
-					</Box>
+				<Box id="content">
+					<Router />
+				</Box>
 
-					<Box id="content">
-						<Router />
-					</Box>
-
-					<Box id="footer">
-						<ViewFooter />
-					</Box>
-				</BrowserRouter>
-			</ThemeProvider>
-		</QueryClientProvider>
+				<Box id="footer">
+					<ViewFooter />
+				</Box>
+			</BrowserRouter>
+		</ThemeProvider>
 	</StrictMode>
 )
