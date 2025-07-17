@@ -1,17 +1,13 @@
 import Container from "@mui/material/Container"
 import Paper from "@mui/material/Paper"
-import Typography from "@mui/material/Typography"
+import { Post } from "../components"
 
 
 export default function () {
 	return (
-		<Container maxWidth="md">
+		<Container maxWidth="lg">
 			<Paper>
-				<Typography>
-					Großartige Inhalte
-					<br />
-					Soon™
-				</Typography>
+				<Post file="/posts/test.md" />
 			</Paper>
 		</Container>
 	)
