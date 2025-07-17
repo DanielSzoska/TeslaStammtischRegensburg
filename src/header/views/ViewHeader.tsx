@@ -2,7 +2,7 @@ import AppBar from "@mui/material/AppBar"
 import Stack from "@mui/material/Stack"
 import Toolbar from "@mui/material/Toolbar"
 import Typography from "@mui/material/Typography"
-import { GithubRibbon, useHandyViewport, useTabletViewport } from "../../util"
+import { useHandyViewport, useTabletViewport } from "../../util"
 
 
 export default function () {
@@ -27,8 +27,6 @@ export default function () {
 					</Typography>
 				</Stack>
 			</Toolbar>
-
-			<GithubRibbon />
 		</AppBar>
 	)
 }
