@@ -26,7 +26,9 @@
     "react-dom": "^19.1.0",
     "react-helmet": "^6.1.0",
     "react-router": "^7.6.3",
-    "react-router-dom": "^7.6.3"
+    "react-router-dom": "^7.6.3",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
     "@types/react": "^19.1.8",
