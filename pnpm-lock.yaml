@@ -26,6 +26,9 @@ importers:
       '@mui/utils':
         specifier: ^7.2.0
         version: 7.2.0(@types/react@19.1.8)(react@19.1.0)
+      ical.js:
+        specifier: ^2.2.0
+        version: 2.2.0
       mdi-material-ui:
         specifier: ^7.9.4
         version: 7.9.4(@mui/material@7.2.0(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react@19.1.0))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)
@@ -2151,6 +2154,9 @@ packages:
 
   html-url-attributes@3.0.1:
     resolution: {integrity: sha512-ol6UPyBWqsrO6EJySPz2O7ZSr856WDrEzM5zMqp+FJJLGMW35cLYmmZnl0vztAZxRUoNZJFTCohfjuIJ8I4QBQ==}
+
+  ical.js@2.2.0:
+    resolution: {integrity: sha512-P8gjWkTEd5M/SEEvBVPPO/KC+V+HRNRZh3xfCDTVWmUTEfVbL8JaK5GTWS2MJ55aLMhfXhbh7kYzd0nrBARjsA==}
 
   ico-endec@0.1.6:
     resolution: {integrity: sha512-ZdLU38ZoED3g1j3iEyzcQj+wAkY2xfWNkymszfJPoxucIUhK7NayQ+/C4Kv0nDFMIsbtbEHldv3V8PU494/ueQ==}
@@ -5530,6 +5536,8 @@ snapshots:
       react-is: 16.13.1
 
   html-url-attributes@3.0.1: {}
+
+  ical.js@2.2.0: {}
 
   ico-endec@0.1.6: {}
 
