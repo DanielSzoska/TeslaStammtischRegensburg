@@ -19,8 +19,7 @@ export default defineConfig({
 				"*.ico",
 				"*.jpg",
 				"*.ttf",
-				"*.woff2",
-				"posts/*.md"
+				"*.woff2"
 			],
 			includeManifestIcons: true,
 			registerType: "autoUpdate",
@@ -34,12 +33,28 @@ export default defineConfig({
 					/^\/sitemap\.xml$/,
 					/^\/robots\.txt$/,
 					/^\/manifest\.webmanifest$/,
-					/^\/posts\/.*\.md$/,
 					/^\/[^/]*\.(?:svg|avif|webp|png|jpg|jpeg|ico)$/i
 				],
 				cleanupOutdatedCaches: true,
 				globPatterns: [
-					"**/*.{js,css,html,ico,png,jpg,jpeg,svg,avif,webp,ttf,woff2,md}"
+					"**/*.{js,css,html,ico,png,jpg,jpeg,svg,avif,webp,ttf,woff2}"
+				],
+				runtimeCaching: [
+					{
+						urlPattern: /^\/posts\/.*\.md$/,
+						handler: "StaleWhileRevalidate",
+						options: {
+							cacheName: "posts",
+							expiration: {
+								maxEntries: 100,
+								purgeOnQuotaError: true,
+								maxAgeSeconds: 60 * 60 * 24 // 1 day
+							},
+							cacheableResponse: {
+								statuses: [ 200 ]
+							}
+						}
+					}
 				]
 			}
 		}),
