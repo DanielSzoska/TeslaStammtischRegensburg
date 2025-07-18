@@ -38,3 +38,7 @@ public/favicon.svg
 /manifest.js
 /pwa-assets.config.d.ts
 /pwa-assets.config.js
+
+# Files generated at build time
+public/sitemaps/posts.xml
+public/posts/index.json
