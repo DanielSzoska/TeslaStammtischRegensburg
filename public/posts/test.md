@@ -1,3 +1,12 @@
+---
+title: "Test Blog Post"
+description: "lorem ipsum dolor sit amet"
+slug: "test"
+author: "Felix"
+created: "2025-07-10"
+updated: "2025-07-12"
+---
+
 # Test Blog Post
 
 ### lorem ipsum dolor sit amet
