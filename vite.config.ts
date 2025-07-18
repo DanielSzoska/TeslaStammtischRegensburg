@@ -29,8 +29,8 @@ export default defineConfig({
 				navigateFallback: "/index.html",
 				navigateFallbackDenylist: [
 					/^\/download\/.*$/,
+					/^\/sitemaps\/.*\.xml$/,
 					/^\/\.well-known\/.*$/,
-					/^\/sitemap\.xml$/,
 					/^\/robots\.txt$/,
 					/^\/manifest\.webmanifest$/,
 					/^\/[^/]*\.(?:svg|avif|webp|png|jpg|jpeg|ico)$/i
