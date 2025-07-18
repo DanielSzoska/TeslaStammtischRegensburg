@@ -20,7 +20,7 @@
     "@mui/utils": "^7.2.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-helmet": "^6.1.0",
+    "react-helmet-async": "^2.0.5",
     "react-router": "^7.6.3",
     "react-router-dom": "^7.6.3",
     "react-markdown": "^10.1.0",
@@ -30,7 +30,6 @@
   "devDependencies": {
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
-    "@types/react-helmet": "^6.1.11",
     "@typescript-eslint/eslint-plugin": "^8.36.0",
     "@typescript-eslint/parser": "^8.36.0",
     "@vite-pwa/assets-generator": "^1.0.0",

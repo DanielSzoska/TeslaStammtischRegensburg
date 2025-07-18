@@ -1,11 +1,11 @@
-import { Helmet } from "react-helmet"
+import { Helmet } from "react-helmet-async"
 
 
 export default function () {
 	return (
 		<Helmet>
 			<script type="application/ld+json">
-				{ JSON.stringify({
+				{JSON.stringify({
 					"@context": "https://schema.org",
 					"@type": "BreadcrumbList",
 					"itemListElement": [
@@ -13,16 +13,16 @@ export default function () {
 							"@type": "ListItem",
 							"position": 1,
 							"name": "Tesla Stammtisch",
-							"item": "https://tesla-stammtisch-regensburg.de/",
+							"item": "https://tesla-stammtisch-regensburg.de/"
 						},
 						{
 							"@type": "ListItem",
 							"position": 2,
 							"name": "Termine",
-							"item": "https://tesla-stammtisch-regensburg.de/termine",
+							"item": "https://tesla-stammtisch-regensburg.de/termine"
 						}
-					],
-				}) }
+					]
+				})}
 			</script>
 		</Helmet>
 	)

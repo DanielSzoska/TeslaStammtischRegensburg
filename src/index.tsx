@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box"
 import { StrictMode } from "react"
 import { createRoot } from "react-dom/client"
-import { Helmet } from "react-helmet"
+import { Helmet, HelmetProvider } from "react-helmet-async"
 import { BrowserRouter } from "react-router-dom"
 // @ts-ignore
 import { registerSW } from "virtual:pwa-register"
@@ -27,28 +27,30 @@ const root = createRoot(container)
 
 root.render(
 	<StrictMode>
-		<Helmet
-			titleTemplate="%s | Tesla Stammtisch Regensburg"
-			htmlAttributes={{ lang: "de" }}
-			titleAttributes={{ lang: "de" }}
-		/>
+		<HelmetProvider>
+			<Helmet
+				titleTemplate="%s | Tesla Stammtisch Regensburg"
+				htmlAttributes={{ lang: "de" }}
+				titleAttributes={{ lang: "de" }}
+			/>
 
-		<SEO />
+			<SEO />
 
-		<ThemeProvider>
-			<BrowserRouter>
-				<Box id="header">
-					<ViewHeader />
-				</Box>
+			<ThemeProvider>
+				<BrowserRouter>
+					<Box id="header">
+						<ViewHeader />
+					</Box>
 
-				<Box id="content">
-					<Router />
-				</Box>
+					<Box id="content">
+						<Router />
+					</Box>
 
-				<Box id="footer">
-					<ViewFooter />
-				</Box>
-			</BrowserRouter>
-		</ThemeProvider>
+					<Box id="footer">
+						<ViewFooter />
+					</Box>
+				</BrowserRouter>
+			</ThemeProvider>
+		</HelmetProvider>
 	</StrictMode>
 )
