@@ -125,7 +125,7 @@ export default function ({ event }: Props) {
 				</CardContent>
 
 				<CardActions>
-					<Stack width="100%" direction={handy ? "column" : "row"} justifyContent="space-between">
+					<Stack width="100%" spacing={1} direction={handy ? "column" : "row"} justifyContent="space-between">
 						<CalendarSubscribeButton />
 						<GoogleMapsButton event={event} />
 					</Stack>
