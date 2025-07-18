@@ -4,6 +4,10 @@
 
 In the project directory, you can run:
 
+### `pnpm install`
+
+Install all necessary dependencies to run and build the project.
+
 ### `pnpm dev`
 
 Runs the app in the development mode.\
