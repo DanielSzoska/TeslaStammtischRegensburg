@@ -9,24 +9,14 @@ import Stack from "@mui/material/Stack"
 import Typography from "@mui/material/Typography"
 import ICAL from "ical.js"
 import { useMemo } from "react"
-import { useHandyViewport } from "../../util"
+import { Helmet } from "react-helmet-async"
+import { formatDate, useHandyViewport } from "../../util"
 import GoogleMapsButton from "./GoogleMapsButton"
 import { CalendarSubscribeButton } from "./index"
 
 
 type Props = {
 	event: ICAL.Event
-}
-
-
-function formatDate(date: Date) {
-	return date.toLocaleString(undefined, {
-		weekday: "short",
-		month: "short",
-		day: "numeric",
-		hour: "2-digit",
-		minute: "2-digit"
-	})
 }
 
 function formatStructuredData(event: ICAL.Event) {
@@ -82,13 +72,13 @@ export default function ({ event }: Props) {
 
 	return (
 		<>
-			{structuredData && (
-				<script
-					type="application/ld+json"
-					dangerouslySetInnerHTML={{
-						__html: JSON.stringify(structuredData)
-					}} />
-			)}
+			<Helmet>
+				{structuredData && (
+					<script type="application/ld+json">
+						{JSON.stringify(structuredData, null, 2)}
+					</script>
+				)}
+			</Helmet>
 
 			<Card variant="outlined">
 				<CardHeader
