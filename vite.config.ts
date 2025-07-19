@@ -41,7 +41,7 @@ export default defineConfig({
 				],
 				runtimeCaching: [
 					{
-						urlPattern: /^\/posts\/((.*\.md)|(index\.json))$/,
+						urlPattern: /\/posts\/((.*\.md)|(index\.json))$/,
 						handler: "StaleWhileRevalidate",
 						options: {
 							cacheName: "posts",
