@@ -51,7 +51,8 @@ export default function ({ markdown }: Props) {
 							{...props}
 							sx={{
 								maxWidth: "100%",
-								objectFit: "contain"
+								objectFit: "contain",
+								borderRadius: "5px"
 							}}
 						/>
 					)
