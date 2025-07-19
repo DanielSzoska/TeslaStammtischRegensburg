@@ -26,7 +26,6 @@
     "react-router-dom": "^7.6.3",
     "react-markdown": "^10.1.0",
     "remark-gfm": "^4.0.1",
-    "gray-matter": "^4.0.3",
     "ical.js": "^2.2.0"
   },
   "devDependencies": {
@@ -45,7 +44,8 @@
     "vite": "^7.0.4",
     "vite-plugin-svgr": "^4.3.0",
     "vite-plugin-pwa": "^1.0.1",
-    "workbox-window": "^7.3.0"
+    "workbox-window": "^7.3.0",
+    "gray-matter": "^4.0.3"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
