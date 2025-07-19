@@ -1,7 +1,9 @@
 import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
+import { useMemo } from "react"
 import ReactMarkdown from "react-markdown"
 import remarkGfm from "remark-gfm"
+import { stripFrontmatter } from "../format"
 
 
 type Props = {
@@ -9,6 +11,9 @@ type Props = {
 }
 
 export default function ({ markdown }: Props) {
+	// Extract Content from Markdown, ignoring metadata (frontmatter)
+	const content = useMemo(() => stripFrontmatter(markdown), [ markdown ])
+
 	return (
 		<Box
 			sx={{
@@ -21,7 +26,7 @@ export default function ({ markdown }: Props) {
 			}}
 		>
 			<ReactMarkdown
-				children={markdown}
+				children={content}
 				remarkPlugins={[ remarkGfm ]}
 				components={{
 					h1: props => (
