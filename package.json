@@ -6,9 +6,10 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "dev": "vite",
-    "build": "tsc && pwa-assets-generator && vite build",
+    "build": "tsc && pnpm generate:post-index && pwa-assets-generator && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate:post-index": "pnpm dlx tsx generate-post-index.ts"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -25,9 +26,11 @@
     "react-router-dom": "^7.6.3",
     "react-markdown": "^10.1.0",
     "remark-gfm": "^4.0.1",
+    "gray-matter": "^4.0.3",
     "ical.js": "^2.2.0"
   },
   "devDependencies": {
+    "@types/node": "^24.0.14",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "@typescript-eslint/eslint-plugin": "^8.36.0",

@@ -9,6 +9,7 @@
   "include": [
     "manifest.ts",
     "pwa-assets.config.ts",
-    "vite.config.ts"
+    "vite.config.ts",
+    "generate-post-index.ts"
   ]
 }
