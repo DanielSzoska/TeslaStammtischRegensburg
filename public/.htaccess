@@ -1,0 +1,32 @@
+# Enable rewrite engine
+RewriteEngine On
+
+# Deny access to /.well-known/ if file does not exist
+RewriteCond %{REQUEST_URI} ^/.well-known/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule .* - [R=404,L]
+
+# Deny access to static assets if file does not exist
+RewriteCond %{REQUEST_URI} \.(css|js|html|svg|png|webp|avif|jpg|jpeg|json|xml|txt|pdf|ico|webmanifest)$ [NC]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule .* - [R=404,L]
+
+# For /download/ disable cache and prevent indexing
+<If "%{REQUEST_URI} =~ m#^/download/#">
+    AddType text/calendar .ics
+
+    Header always set Cache-Control "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0"
+    Header always set Pragma "no-cache"
+    Header always set Expires "0"
+
+    Header always set X-Robots-Tag "noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate, noodp, noydir, noai, noimageai, nodownload, nocache"
+
+    # Return 404 if file not found
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule .* - [R=404,L]
+</If>
+
+# React Router fallback - redirect all non-file, non-directory requests to index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ /index.html [L]
