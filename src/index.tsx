@@ -1,7 +1,6 @@
 import { StrictMode } from "react"
 import { createRoot } from "react-dom/client"
 import { Helmet, HelmetProvider } from "react-helmet-async"
-// @ts-ignore
 import { registerSW } from "virtual:pwa-register"
 import Router from "./router"
 
@@ -10,7 +9,7 @@ import Router from "./router"
 // https://vite-pwa-org.netlify.app/guide/auto-update.html
 registerSW({
 	immediate: true,
-	onRegisteredSW: (_: string, registration: ServiceWorkerRegistration) => {
+	onRegisteredSW: (_, registration) => {
 		if (registration) {
 			setInterval(() => registration.update(), 60 * 60 * 1000)
 		}
