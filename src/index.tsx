@@ -1,15 +1,11 @@
-import Box from "@mui/material/Box"
 import { StrictMode } from "react"
 import { createRoot } from "react-dom/client"
 import { Helmet, HelmetProvider } from "react-helmet-async"
-import { BrowserRouter } from "react-router-dom"
 // @ts-ignore
 import { registerSW } from "virtual:pwa-register"
-import { ViewFooter } from "./footer"
-import { ViewHeader } from "./header"
 import Router from "./router"
 import SEO from "./seo"
-import ThemeProvider from "./theme"
+
 
 // Service Worker Registration
 // https://vite-pwa-org.netlify.app/guide/auto-update.html
@@ -36,21 +32,7 @@ root.render(
 
 			<SEO />
 
-			<ThemeProvider>
-				<BrowserRouter>
-					<Box id="header">
-						<ViewHeader />
-					</Box>
-
-					<Box id="content">
-						<Router />
-					</Box>
-
-					<Box id="footer">
-						<ViewFooter />
-					</Box>
-				</BrowserRouter>
-			</ThemeProvider>
+			<Router />
 		</HelmetProvider>
 	</StrictMode>
 )
