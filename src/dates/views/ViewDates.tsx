@@ -12,6 +12,21 @@ export default function () {
 			<Helmet>
 				<title>Termine</title>
 				<meta name="description" content="Die nächsten Termine des Stammtisches" />
+
+				<script type="application/ld+json">
+					{JSON.stringify({
+						"@context": "https://schema.org",
+						"@type": "BreadcrumbList",
+						"itemListElement": [
+							{
+								"@type": "ListItem",
+								"position": 1,
+								"name": "Termine",
+								"item": "https://tesla-stammtisch-regensburg.de/termine"
+							}
+						]
+					})}
+				</script>
 			</Helmet>
 
 			<Container maxWidth="md">

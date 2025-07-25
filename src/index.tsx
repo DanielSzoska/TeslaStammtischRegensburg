@@ -4,7 +4,6 @@ import { Helmet, HelmetProvider } from "react-helmet-async"
 // @ts-ignore
 import { registerSW } from "virtual:pwa-register"
 import Router from "./router"
-import SEO from "./seo"
 
 
 // Service Worker Registration
@@ -29,8 +28,6 @@ root.render(
 				htmlAttributes={{ lang: "de" }}
 				titleAttributes={{ lang: "de" }}
 			/>
-
-			<SEO />
 
 			<Router />
 		</HelmetProvider>
