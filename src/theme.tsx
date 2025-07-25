@@ -79,10 +79,6 @@ const options: ThemeOptions = {
 					paddingTop: "40px !important",
 					paddingBottom: "40px !important"
 				},
-				"#footer": {
-					bottom: 0,
-					zIndex: 100
-				},
 				img: {
 					pointerEvents: "none",
 					userSelect: "none",
