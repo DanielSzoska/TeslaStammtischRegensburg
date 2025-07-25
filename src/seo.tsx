@@ -13,12 +13,6 @@ export default function () {
 						{
 							"@type": "ListItem",
 							"position": 1,
-							"name": "Tesla Stammtisch",
-							"item": "https://tesla-stammtisch-regensburg.de/"
-						},
-						{
-							"@type": "ListItem",
-							"position": 2,
 							"name": "Termine",
 							"item": "https://tesla-stammtisch-regensburg.de/termine"
 						}
