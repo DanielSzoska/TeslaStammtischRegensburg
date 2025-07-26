@@ -15,7 +15,7 @@ export default function ({ metadata, maxHeight = 500 }: Props) {
 	const year = new Date(metadata.created).getUTCFullYear()
 	const month = String(new Date(metadata.created).getUTCMonth() + 1).padStart(2, "0")
 	const slug = encodeURIComponent(metadata.slug)
-	const url = `/beitrag/${year}/${month}/${slug}`
+	const url = `/beitraege/${year}/${month}/${slug}`
 
 	return (
 		<Stack>

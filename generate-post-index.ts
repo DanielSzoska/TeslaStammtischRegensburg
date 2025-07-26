@@ -97,7 +97,7 @@ function generateSitemapEntry(post: PostMetadata): string {
 	const month = String(date.getUTCMonth() + 1).padStart(2, "0")
 
 	return `  <url>
-    <loc>https://tesla-stammtisch-regensburg.de/beitrag/${year}/${month}/${post.slug}</loc>
+    <loc>https://tesla-stammtisch-regensburg.de/beitraege/${year}/${month}/${post.slug}</loc>
     <lastmod>${post.updated ?? post.created}</lastmod>
   </url>`
 }

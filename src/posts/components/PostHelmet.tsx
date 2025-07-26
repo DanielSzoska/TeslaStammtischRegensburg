@@ -13,7 +13,7 @@ function formatStructuredData(post: PostMetadata) {
 	const [ year, month ] = post.created.split("T")[0].split("-")
 	const encodedSlug = encodeURIComponent(post.slug)
 
-	const url = `https://tesla-stammtisch-regensburg.de/beitrag/${year}/${month}/${encodedSlug}`
+	const url = `https://tesla-stammtisch-regensburg.de/beitraege/${year}/${month}/${encodedSlug}`
 
 	return {
 		"@context": "https://schema.org",

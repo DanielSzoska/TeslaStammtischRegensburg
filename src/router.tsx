@@ -14,7 +14,7 @@ export default function () {
 					<Route index element={<ViewLatestPosts />} />
 					<Route path="/termine" element={<ViewEvents />} />
 
-					<Route path="/beitrag">
+					<Route path="/beitraege">
 						<Route path=":year">
 							<Route index element={<ViewPostsByYear />} />
 
