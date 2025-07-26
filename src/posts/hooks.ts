@@ -11,7 +11,7 @@ export const usePostIndex = () => {
 			.then(response => response.json())
 			.then(json => setIndex(json))
 
-		return () => setIndex([])
+		return () => setIndex(undefined)
 	}, [])
 
 	return index
