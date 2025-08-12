@@ -8,7 +8,7 @@ type Props = Partial<ButtonProps>
 
 export default function ({ ...props }: Props) {
 	const absoluteUrl = useMemo(() => new URL("/download/termine.ics", window.location.href), [ window.location.href ])
-	const webCalUrl = useMemo(() => `webcal://${absoluteUrl.hostname}${absoluteUrl.pathname}`, [ absoluteUrl ])
+	const webCalUrl = useMemo(() => `https://${absoluteUrl.hostname}${absoluteUrl.pathname}`, [ absoluteUrl ])
 
 	return (
 		<Button
