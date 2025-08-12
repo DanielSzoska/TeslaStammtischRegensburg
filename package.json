@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "dev": "vite",
+    "dev": "tsc && pnpm generate:post-index && vite",
     "build": "tsc && pnpm generate:post-index && pwa-assets-generator && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
+    "preview": "pnpm build && vite preview",
     "generate:post-index": "pnpm dlx tsx generate-post-index.ts"
   },
   "dependencies": {
