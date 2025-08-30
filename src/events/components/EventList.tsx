@@ -30,6 +30,8 @@ export default function ({ file }: Props) {
 		return root.getAllSubcomponents("vevent")?.map(component => new ICAL.Event(component))
 	}, [ content ])
 
+	const futureEvents = useMemo(() => events?.filter(event => event.endDate.toJSDate().getTime() > Date.now()), [ events ])
+
 	if (!content) {
 		return (
 			<Box sx={{ minHeight: "200px", display: "flex", justifyContent: "center", alignItems: "center" }}>
@@ -40,7 +42,7 @@ export default function ({ file }: Props) {
 
 	return (
 		<Stack spacing={3}>
-			{(events?.map(event => (
+			{(futureEvents?.map(event => (
 				<Event event={event} />
 			)))}
 		</Stack>
