@@ -69,13 +69,11 @@ const options: ThemeOptions = {
 					flexDirection: "column"
 				},
 				"#header": {
-					position: "sticky",
-					top: 0,
+					position: "relative",
 					zIndex: 100
 				},
 				"#content": {
 					flex: 1,
-					overflowY: "auto !important",
 					paddingTop: "40px !important",
 					paddingBottom: "40px !important"
 				},

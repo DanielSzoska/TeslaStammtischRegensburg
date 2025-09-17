@@ -12,39 +12,43 @@ export default function () {
 	const handy = useHandyViewport()
 
 	return (
-		<AppBar component="div" color="primary">
-			<Toolbar>
-				<Stack component="span" data-nosnippet direction="row" width="100%" alignItems="center" justifyContent="center">
-					<img
-						draggable={false}
-						src="/logo.svg"
-						alt="Tesla Stammtisch Regensburg"
-						style={{
-							height: tablet ? "80px" : "100px"
-						}}
-					/>
+		<>
+			<AppBar component="header" color="primary" elevation={0}>
+				<Toolbar>
+					<Stack component="span" data-nosnippet direction="row" width="100%" alignItems="center" justifyContent="center">
+						<img
+							draggable={false}
+							src="/logo.svg"
+							alt="Tesla Stammtisch Regensburg"
+							style={{
+								height: tablet ? "80px" : "100px"
+							}}
+						/>
 
-					<Typography fontFamily="TESLA" textTransform="uppercase" fontSize={handy ? "1.5rem" : tablet ? "2rem" : "2.5rem"} sx={{ userSelect: "none" }}>
-						Tesla Stammtisch Regensburg
-					</Typography>
-				</Stack>
-			</Toolbar>
+						<Typography fontFamily="TESLA" textTransform="uppercase" fontSize={handy ? "1.5rem" : tablet ? "2rem" : "2.5rem"} sx={{ userSelect: "none" }}>
+							Tesla Stammtisch Regensburg
+						</Typography>
+					</Stack>
+				</Toolbar>
+			</AppBar>
 
-			<Toolbar component="nav">
-				<Stack component="span" data-nosnippet spacing={1} direction="row" width="100%" alignItems="center" justifyContent="center">
-					<Button size="large" component={Link} to="/" variant="text" color="inherit">
-						Start
-					</Button>
+			<AppBar component="nav" color="primary" elevation={4} sx={{ position: "sticky", top: 0 }}>
+				<Toolbar>
+					<Stack component="span" data-nosnippet spacing={1} direction="row" width="100%" alignItems="center" justifyContent="center">
+						<Button size="large" component={Link} to="/" variant="text" color="inherit">
+							Start
+						</Button>
 
-					<Button size="large" component={Link} to="/termine" variant="text" color="inherit">
-						Termine
-					</Button>
+						<Button size="large" component={Link} to="/termine" variant="text" color="inherit">
+							Termine
+						</Button>
 
-					<Button size="large" component={Link} to="https://maps.app.goo.gl/mLrcUSX8CaNX6vYr8" target="_blank" variant="text" color="inherit">
-						Treffpunkt
-					</Button>
-				</Stack>
-			</Toolbar>
-		</AppBar>
+						<Button size="large" component={Link} to="https://maps.app.goo.gl/mLrcUSX8CaNX6vYr8" target="_blank" variant="text" color="inherit">
+							Treffpunkt
+						</Button>
+					</Stack>
+				</Toolbar>
+			</AppBar>
+		</>
 	)
 }
