@@ -31,7 +31,7 @@ export default function ({ metadata, ...props }: Props) {
 	}
 
 	return (
-		<Card variant="outlined" {...props}>
+		<Card variant="outlined" sx={{ padding: handy ? "0.25rem" : undefined }} {...props}>
 			<CardHeader
 				title={metadata.title}
 				subheader={(
