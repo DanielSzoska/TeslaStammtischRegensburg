@@ -54,6 +54,7 @@ export default function () {
 		<>
 			<Helmet>
 				<title>Beiträge {monthName} {year}</title>
+				<link rel="canonical" href={`https://tesla-stammtisch-regensburg.de/beitraege/${year}/${monthName}}`} />
 			</Helmet>
 
 			<Container maxWidth="lg">

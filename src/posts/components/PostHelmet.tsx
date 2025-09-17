@@ -6,14 +6,17 @@ type Props = {
 	metadata: PostMetadata
 }
 
-function formatStructuredData(post: PostMetadata) {
-	const datePublished = post.created.split("T")[0]
-	const dateModified = (post.updated ?? post.created).split("T")[0]
-
+function formatPostURL(post: PostMetadata) {
 	const [ year, month ] = post.created.split("T")[0].split("-")
 	const encodedSlug = encodeURIComponent(post.slug)
 
-	const url = `https://tesla-stammtisch-regensburg.de/beitraege/${year}/${month}/${encodedSlug}`
+	return `https://tesla-stammtisch-regensburg.de/beitraege/${year}/${month}/${encodedSlug}`
+}
+
+function formatStructuredData(post: PostMetadata) {
+	const datePublished = post.created.split("T")[0]
+	const dateModified = (post.updated ?? post.created).split("T")[0]
+	const url = formatPostURL(post)
 
 	return {
 		"@context": "https://schema.org",
@@ -38,6 +41,8 @@ export default function ({ metadata }: Props) {
 	return (
 		<Helmet>
 			<title>{metadata.title}</title>
+
+			<link rel="canonical" href={formatPostURL(metadata)} />
 
 			{metadata.description && (
 				<meta name="description" content={metadata.description} />

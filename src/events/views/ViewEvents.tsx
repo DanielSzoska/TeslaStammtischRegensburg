@@ -13,6 +13,8 @@ export default function () {
 				<title>Termine</title>
 				<meta name="description" content="Die nächsten Termine des Stammtisches" />
 
+				<link rel="canonical" href="https://tesla-stammtisch-regensburg.de/termine" />
+
 				<script type="application/ld+json">
 					{JSON.stringify({
 						"@context": "https://schema.org",

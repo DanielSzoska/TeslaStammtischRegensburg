@@ -14,6 +14,7 @@ export default function () {
 		<Container maxWidth="lg">
 			<Helmet>
 				<title>Neueste Beiträge</title>
+				<link rel="canonical" href="https://tesla-stammtisch-regensburg.de/" />
 			</Helmet>
 
 			<Box component={Paper} padding="2rem">
