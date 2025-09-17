@@ -14,8 +14,6 @@ function formatPostURL(post: PostMetadata) {
 }
 
 function formatStructuredDataBlog(post: PostMetadata) {
-	const datePublished = post.created.split("T")[0]
-	const dateModified = (post.updated ?? post.created).split("T")[0]
 	const url = formatPostURL(post)
 
 	return {
@@ -23,8 +21,8 @@ function formatStructuredDataBlog(post: PostMetadata) {
 		"@type": "BlogPosting",
 		url,
 		headline: post.title,
-		datePublished,
-		dateModified,
+		datePublished: post.created,
+		dateModified: post.updated ?? post.created,
 		author: {
 			"@type": "Person",
 			name: post.author
