@@ -13,7 +13,7 @@ function formatPostURL(post: PostMetadata) {
 	return `https://tesla-stammtisch-regensburg.de/beitraege/${year}/${month}/${encodedSlug}`
 }
 
-function formatStructuredData(post: PostMetadata) {
+function formatStructuredDataBlog(post: PostMetadata) {
 	const datePublished = post.created.split("T")[0]
 	const dateModified = (post.updated ?? post.created).split("T")[0]
 	const url = formatPostURL(post)
@@ -37,6 +37,43 @@ function formatStructuredData(post: PostMetadata) {
 	}
 }
 
+function formatStructuredDataBreadcrumbs(post: PostMetadata) {
+	const [ year, month ] = post.created.split("T")[0].split("-")
+	const monthName = new Date(Number(year), Number(month) - 1).toLocaleString("de-DE", { month: "long" })
+	const encodedSlug = encodeURIComponent(post.slug)
+
+	return {
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [
+			{
+				"@type": "ListItem",
+				"position": 1,
+				"name": "Beiträge",
+				"item": "https://tesla-stammtisch-regensburg.de/beitraege"
+			},
+			{
+				"@type": "ListItem",
+				"position": 2,
+				"name": `Beiträge ${year}`,
+				"item": `https://tesla-stammtisch-regensburg.de/beitraege/${year}`
+			},
+			{
+				"@type": "ListItem",
+				"position": 3,
+				"name": `Beiträge ${monthName} ${year}`,
+				"item": `https://tesla-stammtisch-regensburg.de/beitraege/${year}/${month}`
+			},
+			{
+				"@type": "ListItem",
+				"position": 4,
+				"name": post.title,
+				"item": `https://tesla-stammtisch-regensburg.de/beitraege/${year}/${month}/${encodedSlug}`
+			}
+		]
+	}
+}
+
 export default function ({ metadata }: Props) {
 	return (
 		<Helmet>
@@ -49,7 +86,11 @@ export default function ({ metadata }: Props) {
 			)}
 
 			<script type="application/ld+json">
-				{JSON.stringify(formatStructuredData(metadata), null, 2)}
+				{JSON.stringify(formatStructuredDataBreadcrumbs(metadata), null, 2)}
+			</script>
+
+			<script type="application/ld+json">
+				{JSON.stringify(formatStructuredDataBlog(metadata), null, 2)}
 			</script>
 		</Helmet>
 	)
