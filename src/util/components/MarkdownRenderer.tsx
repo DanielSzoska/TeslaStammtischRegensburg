@@ -17,9 +17,12 @@ export default function ({ markdown }: Props) {
 	return (
 		<Box
 			sx={{
-				"& h1": { fontSize: "2rem", fontWeight: "bold", mt: 4 },
+				"& h1": { fontSize: "2rem", fontWeight: "bold", mt: 3 },
 				"& h2": { fontSize: "1.5rem", fontWeight: "bold", mt: 3 },
-				"& p": { mt: 2 },
+				"& h3": { fontSize: "1.3rem", fontWeight: "bold", mt: 2 },
+				"& h4": { fontSize: "1.2rem", fontWeight: "bold", mt: 2 },
+				"& h5": { fontSize: "1.1rem", fontWeight: "bold", mt: 2 },
+				"& p": { mt: 1 },
 				"& pre": { bgcolor: "#f6f8fa", p: 2, borderRadius: 2, overflowX: "auto" },
 				"& code": { fontFamily: "monospace", bgcolor: "#f0f0f0", px: 0.5 },
 				"& li": { mt: 1 }
@@ -30,10 +33,19 @@ export default function ({ markdown }: Props) {
 				remarkPlugins={[ remarkGfm ]}
 				components={{
 					h1: props => (
-						<Typography variant="h4" {...props} />
+						<Typography component="h1" {...props} />
 					),
 					h2: props => (
-						<Typography variant="h5" {...props} />
+						<Typography component="h2" {...props} />
+					),
+					h3: props => (
+						<Typography component="h3" {...props} />
+					),
+					h4: props => (
+						<Typography component="h4" {...props} />
+					),
+					h5: props => (
+						<Typography component="h5" {...props} />
 					),
 					p: props => (
 						<Typography variant="body1" {...props} />
