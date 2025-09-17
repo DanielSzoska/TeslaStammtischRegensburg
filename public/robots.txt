@@ -1,5 +1,3 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow: /download/
-Disallow: /posts/
 Sitemap: https://tesla-stammtisch-regensburg.de/sitemaps/index.xml
