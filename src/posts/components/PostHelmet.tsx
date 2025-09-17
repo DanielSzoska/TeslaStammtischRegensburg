@@ -21,8 +21,8 @@ function formatStructuredDataBlog(post: PostMetadata) {
 		"@type": "BlogPosting",
 		url,
 		headline: post.title,
-		datePublished: post.created,
-		dateModified: post.updated ?? post.created,
+		datePublished: new Date(post.created).toISOString(),
+		dateModified: new Date(post.updated ?? post.created).toISOString(),
 		author: {
 			"@type": "Person",
 			name: post.author
