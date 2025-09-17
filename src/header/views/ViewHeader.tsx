@@ -12,7 +12,7 @@ export default function () {
 	const handy = useHandyViewport()
 
 	return (
-		<AppBar component="header" color="primary">
+		<AppBar component="div" color="primary">
 			<Toolbar>
 				<Stack component="span" data-nosnippet direction="row" width="100%" alignItems="center" justifyContent="center">
 					<img
@@ -30,7 +30,7 @@ export default function () {
 				</Stack>
 			</Toolbar>
 
-			<Toolbar>
+			<Toolbar component="nav">
 				<Stack component="span" data-nosnippet spacing={1} direction="row" width="100%" alignItems="center" justifyContent="center">
 					<Button size="large" component={Link} to="/" variant="text" color="inherit">
 						Start

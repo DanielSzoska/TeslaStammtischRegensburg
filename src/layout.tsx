@@ -7,7 +7,7 @@ import ThemeProvider from "./theme"
 export function DefaultLayout() {
 	return (
 		<ThemeProvider>
-			<Box id="header">
+			<Box component="header" id="header">
 				<ViewHeader />
 			</Box>
 
