@@ -1,5 +1,28 @@
+# MIME for ical files
+AddType text/calendar .ics
+
+# General Security Headers
+Header always set X-Content-Type-Options "nosniff"
+Header always set X-Frame-Options "SAMEORIGIN"
+Header always set X-XSS-Protection "1; mode=block"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+# Enforce HTTPS in browsers
+Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+
+# Instruct browsers to disable all APIs that are not required
+Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=(), accelerometer=(), gyroscope=(), magnetometer=()"
+
+# Instruct browsers to load certain contents only from trusted sources
+# Images can be loaded from foreign sources as long as they are served over HTTPS
+Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data: blob:; font-src 'self' https:; manifest-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'"
+
 # Enable rewrite engine
 RewriteEngine On
+
+# Redirect www subdomain to apex
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
 
 # Deny access to /.well-known/ if file does not exist
 RewriteCond %{REQUEST_URI} ^/.well-known/
@@ -13,8 +36,6 @@ RewriteRule .* - [R=404,L]
 
 # For /download/ disable cache and prevent indexing
 <If "%{REQUEST_URI} =~ m#^/download/#">
-    AddType text/calendar .ics
-
     Header always set Cache-Control "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0"
     Header always set Pragma "no-cache"
     Header always set Expires "0"
@@ -27,6 +48,7 @@ RewriteRule .* - [R=404,L]
 </If>
 
 # React Router fallback - redirect all non-file, non-directory requests to index.html
+RewriteCond %{REQUEST_URI} !^/download/
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^ /index.html [L]
