@@ -2,6 +2,7 @@ import Box from "@mui/material/Box"
 import Button from "@mui/material/Button"
 import Stack from "@mui/material/Stack"
 import { Link } from "react-router-dom"
+import { useHandyViewport } from "../../util"
 import { PostMetadata } from "../types"
 import Post from "./Post"
 
@@ -16,6 +17,7 @@ export default function ({ metadata, maxHeight = 500 }: Props) {
 	const month = String(new Date(metadata.created).getUTCMonth() + 1).padStart(2, "0")
 	const slug = encodeURIComponent(metadata.slug)
 	const url = `/beitraege/${year}/${month}/${slug}`
+	const handy = useHandyViewport()
 
 	return (
 		<Stack>
@@ -38,7 +40,7 @@ export default function ({ metadata, maxHeight = 500 }: Props) {
 			</Box>
 
 			<span data-nosnippet>
-				<Button component={Link} to={url} color="primary">
+				<Button component={Link} to={url} color="primary" sx={{ display: handy ? "block" : "inline-block", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
 					Weiterlesen: {metadata.title}
 				</Button>
 			</span>
