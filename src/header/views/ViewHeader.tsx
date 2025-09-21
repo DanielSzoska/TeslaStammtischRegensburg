@@ -32,7 +32,7 @@ export default function () {
 				</Toolbar>
 			</AppBar>
 
-			<AppBar component="nav" color="primary" elevation={4} sx={{ position: "sticky", top: 0 }}>
+			<AppBar component="nav" color="primary" elevation={4} sx={{ position: "sticky", top: 0, zIndex: 100 }}>
 				<Toolbar>
 					<Stack component="span" data-nosnippet spacing={1} direction="row" width="100%" alignItems="center" justifyContent="center">
 						<Button size="large" component={Link} to="/" variant="text" color="inherit">
