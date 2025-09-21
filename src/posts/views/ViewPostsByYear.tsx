@@ -5,12 +5,13 @@ import { useMemo } from "react"
 import { Helmet } from "react-helmet-async"
 import { useParams } from "react-router"
 import { ViewNotFound } from "../../404"
-import { isValidYear } from "../../util"
+import { isValidYear, useHandyViewport } from "../../util"
 import { PostList } from "../components"
 import { usePostIndex } from "../hooks"
 
 
 export default function () {
+	const handy = useHandyViewport()
 	const { year } = useParams()
 	const index = usePostIndex()
 
@@ -51,7 +52,7 @@ export default function () {
 				<link rel="canonical" href={`https://tesla-stammtisch-regensburg.de/beitraege/${year}`} />
 			</Helmet>
 
-			<Box component={Paper} padding="2rem">
+			<Box component={Paper} padding={handy ? "0.5rem" : "2rem"}>
 				<PostList posts={posts} />
 			</Box>
 		</Container>

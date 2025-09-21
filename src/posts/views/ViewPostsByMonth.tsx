@@ -5,12 +5,13 @@ import { useMemo } from "react"
 import { Helmet } from "react-helmet-async"
 import { useParams } from "react-router"
 import { ViewNotFound } from "../../404"
-import { isValidMonth, isValidYear } from "../../util"
+import { isValidMonth, isValidYear, useHandyViewport } from "../../util"
 import { PostList } from "../components"
 import { usePostIndex } from "../hooks"
 
 
 export default function () {
+	const handy = useHandyViewport()
 	const { year, month } = useParams()
 	const index = usePostIndex()
 
@@ -58,7 +59,7 @@ export default function () {
 			</Helmet>
 
 			<Container maxWidth="lg">
-				<Box component={Paper} padding="2rem">
+				<Box component={Paper} padding={handy ? "0.5rem" : "2rem"}>
 					<PostList posts={posts} />
 				</Box>
 			</Container>
