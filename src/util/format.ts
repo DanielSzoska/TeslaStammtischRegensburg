@@ -1,11 +1,13 @@
-export function formatDate(date: Date) {
-	return date.toLocaleString(undefined, {
-		weekday: "short",
-		month: "short",
-		day: "numeric",
-		hour: "2-digit",
-		minute: "2-digit"
-	})
+export function formatDate(date: Date, time = false) {
+	const options: Intl.DateTimeFormatOptions = {
+		weekday: "long",
+		day: "2-digit",
+		month: "2-digit",
+		year: "numeric",
+		...(time && { hour: "2-digit", minute: "2-digit" })
+	}
+
+	return date.toLocaleString(undefined, options)
 }
 
 export function stripFrontmatter(markdown: string): string {
