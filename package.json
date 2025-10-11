@@ -43,7 +43,6 @@
     "gray-matter": "^4.0.3",
     "typescript": "^5.9.3",
     "vite": "^7.1.9",
-    "vite-plugin-prerender": "^1.0.8",
     "vite-plugin-pwa": "^1.0.1",
     "vite-plugin-svgr": "^4.3.0",
     "workbox-window": "^7.3.0"
