@@ -6,10 +6,11 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "dev": "tsc && pnpm generate:post-index && vite",
-    "build": "tsc && pnpm generate:post-index && pwa-assets-generator && vite build",
+    "build": "tsc && pnpm generate:post-index && pwa-assets-generator && vite build && pnpm generate:static-pages",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "pnpm build && vite preview",
-    "generate:post-index": "pnpm dlx tsx generate-post-index.ts"
+    "generate:post-index": "pnpm dlx tsx generate-post-index.ts",
+    "generate:static-pages": "pnpm dlx tsx ssg.ts"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -45,14 +46,16 @@
     "vite": "^7.1.9",
     "vite-plugin-pwa": "^1.0.1",
     "vite-plugin-svgr": "^4.3.0",
-    "workbox-window": "^7.3.0"
+    "workbox-window": "^7.3.0",
+    "playwright": "^1.56.0",
+    "prettier": "^3.6.2",
+    "tree-kill": "^1.2.2"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
       "@swc/core",
       "core-js",
       "esbuild",
-      "puppeteer",
       "sharp"
     ]
   }
