@@ -47,6 +47,11 @@ RewriteRule .* - [R=404,L]
     RewriteRule .* - [R=404,L]
 </If>
 
+# Disable direct access to static pages folder
+<If "%{THE_REQUEST} =~ m#\s/static/#">
+    RewriteRule ^ - [R=404,L]
+</If>
+
 # Pre-rendered Static Pages for Search Engine Bots (SEO)
 RewriteCond %{REQUEST_URI} !^/static/
 RewriteCond %{HTTP_USER_AGENT} "(googlebot|bingbot|yandex|duckduckgo|baiduspider|sogou|exabot|facebot|applebot|linkedinbot|twitterbot|pinterest|semrushbot|ahrefsbot|mj12bot|seznambot|siteexplorer)" [NC]
