@@ -47,8 +47,15 @@ RewriteRule .* - [R=404,L]
     RewriteRule .* - [R=404,L]
 </If>
 
+# Pre-rendered Static Pages for Search Engine Bots (SEO)
+RewriteCond %{REQUEST_URI} !^/static/
+RewriteCond %{HTTP_USER_AGENT} "(googlebot|bingbot|yandex|duckduckgo|baiduspider|sogou|exabot|facebot|applebot|linkedinbot|twitterbot|pinterest|semrushbot|ahrefsbot|mj12bot|seznambot|siteexplorer)" [NC]
+RewriteCond %{DOCUMENT_ROOT}/static%{REQUEST_URI}/index.html -f
+RewriteRule ^(.*)$ /static/$1/index.html [L]
+
 # React Router fallback - redirect all non-file, non-directory requests to index.html
 RewriteCond %{REQUEST_URI} !^/download/
+RewriteCond %{REQUEST_URI} !^/static/
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^ /index.html [L]
