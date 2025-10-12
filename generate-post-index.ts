@@ -3,7 +3,6 @@ import matter from "gray-matter"
 import path from "path"
 
 
-// TODO: sitemap generation  /public/sitemaps/posts.xml
 // TODO: RSS feed generation /public/rss.xml
 
 type PostMetadata = {
