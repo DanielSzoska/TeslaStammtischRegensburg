@@ -53,7 +53,7 @@ export default function ({ metadata, ...props }: Props) {
 								</Typography>
 							</Box>
 
-							{metadata.updated && (
+							{metadata.updated && metadata.updated !== metadata.created && (
 								<Box display="flex" alignItems="center" gap={1}>
 									<EditCalendarIcon fontSize="small" />
 
