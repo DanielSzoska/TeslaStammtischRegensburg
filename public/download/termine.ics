@@ -192,6 +192,27 @@ ACTION:DISPLAY
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:stammtisch-april-2026@tesla-stammtisch-regensburg.de
+DTSTAMP:20251111T120000Z
+SUMMARY:Tesla Stammtisch
+DESCRIPTION:Monatlicher Stammtisch\nApril 2026
+LOCATION:Restaurant Meilenstein\nJunkersstraße 3\n93055 Regensburg\nDeutschland
+GEO:48.9950241;12.1506653
+ORGANIZER;CN=Tesla Stammtisch:mailto:info@tesla-stammtisch-regensburg.de
+DTSTART;TZID=Europe/Berlin:20260410T180000
+DTEND;TZID=Europe/Berlin:20260410T220000
+BEGIN:VALARM
+TRIGGER:-P4D
+DESCRIPTION:Diese Woche wieder Stammtisch
+ACTION:DISPLAY
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+DESCRIPTION:Morgen Stammtisch
+ACTION:DISPLAY
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:stammtisch-mai-2026@tesla-stammtisch-regensburg.de
 DTSTAMP:20251111T120000Z
 SUMMARY:Tesla Stammtisch
