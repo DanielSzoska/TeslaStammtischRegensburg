@@ -1,0 +1,49 @@
+name: Deployment
+
+on:
+  push:
+    branches: [ release ]
+
+concurrency:
+  group: "deploy"
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'pnpm'
+      
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install Playwright
+        run: pnpm exec playwright install
+      
+      - name: Build Project
+        run: pnpm build
+      
+      - name: Deploy via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+          username: ${{ secrets.SFTP_USERNAME }}
+          server: ${{ secrets.SFTP_SERVER }}
+          port: 22
+          ssh_private_key: ${{ secrets.SFTP_SSH_KEY }}
+          local_path: './dist/*'
+          remote_path: '/'
+          sftp_only: true
+          delete_remote_files: true
