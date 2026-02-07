@@ -26,7 +26,7 @@ END:VTIMEZONE
 BEGIN:VEVENT
 UID:stammtisch-august-2025@tesla-stammtisch-regensburg.de
 DTSTAMP:20250713T120000Z
-SUMMARY:Tesla Stammtisch
+SUMMARY:59. Tesla Stammtisch
 DESCRIPTION:Monatlicher Stammtisch\nAugust 2025
 LOCATION:Restaurant Meilenstein\nJunkersstraße 3\n93055 Regensburg\nDeutschland
 GEO:48.9950241;12.1506653
@@ -47,7 +47,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:stammtisch-september-2025@tesla-stammtisch-regensburg.de
 DTSTAMP:20250713T120000Z
-SUMMARY:Tesla Stammtisch
+SUMMARY:60. Tesla Stammtisch
 DESCRIPTION:Monatlicher Stammtisch\nSeptember 2025
 LOCATION:Restaurant Meilenstein\nJunkersstraße 3\n93055 Regensburg\nDeutschland
 GEO:48.9950241;12.1506653
@@ -68,7 +68,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:stammtisch-oktober-2025@tesla-stammtisch-regensburg.de
 DTSTAMP:20250713T120000Z
-SUMMARY:Tesla Stammtisch
+SUMMARY:61. Tesla Stammtisch
 DESCRIPTION:Monatlicher Stammtisch\nOktober 2025
 LOCATION:Restaurant Meilenstein\nJunkersstraße 3\n93055 Regensburg\nDeutschland
 GEO:48.9950241;12.1506653
@@ -89,7 +89,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:stammtisch-november-2025@tesla-stammtisch-regensburg.de
 DTSTAMP:20250713T120000Z
-SUMMARY:Tesla Stammtisch
+SUMMARY:62. Tesla Stammtisch
 DESCRIPTION:Monatlicher Stammtisch\nNovember 2025
 LOCATION:Restaurant Meilenstein\nJunkersstraße 3\n93055 Regensburg\nDeutschland
 GEO:48.9950241;12.1506653
@@ -110,7 +110,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:stammtisch-dezember-2025@tesla-stammtisch-regensburg.de
 DTSTAMP:20250713T120000Z
-SUMMARY:Tesla Stammtisch
+SUMMARY:63. Tesla Stammtisch
 DESCRIPTION:Monatlicher Stammtisch\nDezember 2025
 LOCATION:Restaurant Meilenstein\nJunkersstraße 3\n93055 Regensburg\nDeutschland
 GEO:48.9950241;12.1506653
@@ -131,7 +131,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:stammtisch-januar-2026@tesla-stammtisch-regensburg.de
 DTSTAMP:20251111T120000Z
-SUMMARY:Tesla Stammtisch
+SUMMARY:64. Tesla Stammtisch
 DESCRIPTION:Monatlicher Stammtisch\nJanuar 2026
 LOCATION:Restaurant Meilenstein\nJunkersstraße 3\n93055 Regensburg\nDeutschland
 GEO:48.9950241;12.1506653
@@ -151,8 +151,8 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:stammtisch-februar-2026@tesla-stammtisch-regensburg.de
-DTSTAMP:20251111T120000Z
-SUMMARY:Tesla Stammtisch
+DTSTAMP:20260207T230000Z
+SUMMARY:65. Tesla Stammtisch
 DESCRIPTION:Monatlicher Stammtisch\nFebruar 2026
 LOCATION:Restaurant Meilenstein\nJunkersstraße 3\n93055 Regensburg\nDeutschland
 GEO:48.9950241;12.1506653
@@ -172,9 +172,9 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:stammtisch-maerz-2026@tesla-stammtisch-regensburg.de
-DTSTAMP:20251111T120000Z
-SUMMARY:Tesla Stammtisch
-DESCRIPTION:Monatlicher Stammtisch\nMärz 2026
+DTSTAMP:20260207T230000Z
+SUMMARY:66. Tesla Stammtisch
+DESCRIPTION:Monatlicher Stammtisch\nMärz 2026\nWegen Umbauarbeiten ist nur das Bistro offen!
 LOCATION:Restaurant Meilenstein\nJunkersstraße 3\n93055 Regensburg\nDeutschland
 GEO:48.9950241;12.1506653
 ORGANIZER;CN=Tesla Stammtisch:mailto:info@tesla-stammtisch-regensburg.de
@@ -193,8 +193,8 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:stammtisch-april-2026@tesla-stammtisch-regensburg.de
-DTSTAMP:20251111T120000Z
-SUMMARY:Tesla Stammtisch
+DTSTAMP:20260207T230000Z
+SUMMARY:67. Tesla Stammtisch
 DESCRIPTION:Monatlicher Stammtisch\nApril 2026
 LOCATION:Restaurant Meilenstein\nJunkersstraße 3\n93055 Regensburg\nDeutschland
 GEO:48.9950241;12.1506653
@@ -214,8 +214,8 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:stammtisch-mai-2026@tesla-stammtisch-regensburg.de
-DTSTAMP:20251111T120000Z
-SUMMARY:Tesla Stammtisch
+DTSTAMP:20260207T230000Z
+SUMMARY:68. Tesla Stammtisch
 DESCRIPTION:Monatlicher Stammtisch\nMai 2026
 LOCATION:Restaurant Meilenstein\nJunkersstraße 3\n93055 Regensburg\nDeutschland
 GEO:48.9950241;12.1506653
@@ -235,8 +235,8 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:stammtisch-juni-2026@tesla-stammtisch-regensburg.de
-DTSTAMP:20251111T120000Z
-SUMMARY:Tesla Stammtisch
+DTSTAMP:20260207T230000Z
+SUMMARY:69. Tesla Stammtisch
 DESCRIPTION:Monatlicher Stammtisch\nJuni 2026
 LOCATION:Restaurant Meilenstein\nJunkersstraße 3\n93055 Regensburg\nDeutschland
 GEO:48.9950241;12.1506653
@@ -256,8 +256,8 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:stammtisch-juli-2026@tesla-stammtisch-regensburg.de
-DTSTAMP:20251111T120000Z
-SUMMARY:Tesla Stammtisch
+DTSTAMP:20260207T230000Z
+SUMMARY:70. Tesla Stammtisch
 DESCRIPTION:Monatlicher Stammtisch\nJuli 2026
 LOCATION:Restaurant Meilenstein\nJunkersstraße 3\n93055 Regensburg\nDeutschland
 GEO:48.9950241;12.1506653
@@ -277,8 +277,8 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:stammtisch-august-2026@tesla-stammtisch-regensburg.de
-DTSTAMP:20251111T120000Z
-SUMMARY:Tesla Stammtisch
+DTSTAMP:20260207T230000Z
+SUMMARY:71. Tesla Stammtisch
 DESCRIPTION:Monatlicher Stammtisch\nAugust 2026
 LOCATION:Restaurant Meilenstein\nJunkersstraße 3\n93055 Regensburg\nDeutschland
 GEO:48.9950241;12.1506653
@@ -298,8 +298,8 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:stammtisch-september-2026@tesla-stammtisch-regensburg.de
-DTSTAMP:20251111T120000Z
-SUMMARY:Tesla Stammtisch
+DTSTAMP:20260207T230000Z
+SUMMARY:72. Tesla Stammtisch
 DESCRIPTION:Monatlicher Stammtisch\nSeptember 2026
 LOCATION:Restaurant Meilenstein\nJunkersstraße 3\n93055 Regensburg\nDeutschland
 GEO:48.9950241;12.1506653
@@ -319,8 +319,8 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:stammtisch-oktober-2026@tesla-stammtisch-regensburg.de
-DTSTAMP:20251111T120000Z
-SUMMARY:Tesla Stammtisch
+DTSTAMP:20260207T230000Z
+SUMMARY:73. Tesla Stammtisch
 DESCRIPTION:Monatlicher Stammtisch\nOktober 2026
 LOCATION:Restaurant Meilenstein\nJunkersstraße 3\n93055 Regensburg\nDeutschland
 GEO:48.9950241;12.1506653
@@ -340,8 +340,8 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:stammtisch-november-2026@tesla-stammtisch-regensburg.de
-DTSTAMP:20251111T120000Z
-SUMMARY:Tesla Stammtisch
+DTSTAMP:20260207T230000Z
+SUMMARY:74. Tesla Stammtisch
 DESCRIPTION:Monatlicher Stammtisch\nNovember 2026
 LOCATION:Restaurant Meilenstein\nJunkersstraße 3\n93055 Regensburg\nDeutschland
 GEO:48.9950241;12.1506653
@@ -361,8 +361,8 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:stammtisch-dezember-2026@tesla-stammtisch-regensburg.de
-DTSTAMP:20251111T120000Z
-SUMMARY:Tesla Stammtisch
+DTSTAMP:20260207T230000Z
+SUMMARY:75. Tesla Stammtisch
 DESCRIPTION:Monatlicher Stammtisch\nDezember 2026
 LOCATION:Restaurant Meilenstein\nJunkersstraße 3\n93055 Regensburg\nDeutschland
 GEO:48.9950241;12.1506653
