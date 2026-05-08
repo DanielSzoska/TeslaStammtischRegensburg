@@ -3,7 +3,7 @@ import Button from "@mui/material/Button"
 import Stack from "@mui/material/Stack"
 import Toolbar from "@mui/material/Toolbar"
 import Typography from "@mui/material/Typography"
-import { Link } from "react-router-dom"
+import { Link } from "react-router"
 import { useHandyViewport, useTabletViewport } from "../../util"
 
 
@@ -15,7 +15,7 @@ export default function () {
 		<>
 			<AppBar component="header" color="primary" elevation={0}>
 				<Toolbar>
-					<Stack component="span" data-nosnippet direction="row" width="100%" alignItems="center" justifyContent="center">
+					<Stack component="span" data-nosnippet direction="row" sx={{ width: "100%", alignItems: "center", justifyContent: "center" }}>
 						<img
 							draggable={false}
 							src="/logo.svg"
@@ -25,7 +25,7 @@ export default function () {
 							}}
 						/>
 
-						<Typography fontFamily="TESLA" textTransform="uppercase" fontSize={handy ? "1.5rem" : tablet ? "2rem" : "2.5rem"} sx={{ userSelect: "none" }}>
+						<Typography sx={{ fontFamily: "TESLA", textTransform: "uppercase", fontSize: handy ? "1.5rem" : tablet ? "2rem" : "2.5rem", userSelect: "none" }}>
 							Tesla Stammtisch Regensburg
 						</Typography>
 					</Stack>
@@ -34,7 +34,7 @@ export default function () {
 
 			<AppBar component="nav" color="primary" elevation={4} sx={{ position: "sticky", top: 0, zIndex: 100 }}>
 				<Toolbar>
-					<Stack component="span" data-nosnippet spacing={1} direction="row" width="100%" alignItems="center" justifyContent="center">
+					<Stack component="span" data-nosnippet spacing={1} direction="row" sx={{ width: "100%", alignItems: "center", justifyContent: "center" }}>
 						<Button size="large" component={Link} to="/" variant="text" color="inherit">
 							Start
 						</Button>

@@ -1,5 +1,5 @@
 import Box from "@mui/material/Box"
-import { Outlet } from "react-router-dom"
+import { Outlet } from "react-router"
 import { ViewHeader } from "./header"
 import ThemeProvider from "./theme"
 

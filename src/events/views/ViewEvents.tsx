@@ -34,7 +34,7 @@ export default function () {
 			<Container maxWidth="md">
 				<Paper>
 					<Stack spacing={4}>
-						<Typography variant="h3" fontWeight="bold" textAlign="center" component="span" data-nosnippet>
+						<Typography variant="h3" sx={{ textAlign: "center", fontWeight: "bold" }} component="span" data-nosnippet>
 							Nächste Termine
 						</Typography>
 

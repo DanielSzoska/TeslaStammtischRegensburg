@@ -2,7 +2,7 @@ import MapIcon from "@mui/icons-material/Map"
 import Button, { ButtonProps } from "@mui/material/Button"
 import ICAL from "ical.js"
 import { useMemo } from "react"
-import { Link } from "react-router-dom"
+import { Link } from "react-router"
 
 
 type Props = {

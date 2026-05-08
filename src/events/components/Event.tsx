@@ -85,7 +85,7 @@ export default function ({ event }: Props) {
 					title={event.summary}
 					subheader={(
 						<Stack spacing={1}>
-							<Box display="flex" alignItems="center" gap={1}>
+							<Box sx={{ display: "flex", gap: 1, alignItems: "center" }}>
 								<CalendarMonthIcon fontSize="small" />
 
 								<Typography variant="body2">
@@ -94,10 +94,10 @@ export default function ({ event }: Props) {
 							</Box>
 
 							{event.location && (
-								<Box display="flex" alignItems={handy ? "start" : "center"} gap={1}>
+								<Box sx={{ display: "flex", gap: 1, alignItems: handy ? "start" : "center" }}>
 									<RoomIcon fontSize="small" />
 
-									<Typography variant="body2" whiteSpace={handy ? "pre-wrap" : "nowrap"}>
+									<Typography variant="body2" sx={{ whiteSpace: handy ? "pre-wrap" : "nowrap" }}>
 										{handy ? event.location : event.location.replaceAll(/(\r\n|\r|\n)/g, ", ")}
 									</Typography>
 								</Box>
@@ -108,14 +108,14 @@ export default function ({ event }: Props) {
 
 				<CardContent>
 					{event.description && (
-						<Typography variant="body2" sx={{ mb: 2 }} whiteSpace="pre-wrap">
+						<Typography variant="body2" sx={{ mb: 2, whiteSpace: "pre-wrap" }}>
 							{event.description}
 						</Typography>
 					)}
 				</CardContent>
 
 				<CardActions>
-					<Stack width="100%" spacing={1} direction={handy ? "column" : "row"} justifyContent="space-between">
+					<Stack spacing={1} direction={handy ? "column" : "row"} sx={{ width: "100%", justifyContent: "space-between" }}>
 						<CalendarSubscribeButton />
 						<GoogleMapsButton event={event} />
 					</Stack>

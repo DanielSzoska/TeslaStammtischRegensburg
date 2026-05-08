@@ -37,15 +37,15 @@ export default function ({ metadata, ...props }: Props) {
 				subheader={(
 					<Stack spacing={3} component="span" data-nosnippet>
 						<Stack spacing={1}>
-							<Box display="flex" alignItems={handy ? "start" : "center"} gap={1}>
+							<Box sx={{ display: "flex", gap: 1, alignItems: handy ? "start" : "center" }}>
 								<PersonIcon fontSize="small" />
 
-								<Typography variant="body2" whiteSpace={handy ? "pre-wrap" : "nowrap"}>
+								<Typography variant="body2" sx={{ whiteSpace: handy ? "pre-wrap" : "nowrap" }}>
 									{metadata.author}
 								</Typography>
 							</Box>
 
-							<Box display="flex" alignItems="center" gap={1}>
+							<Box sx={{ display: "flex", gap: 1, alignItems: "center" }}>
 								<CalendarMonthIcon fontSize="small" />
 
 								<Typography variant="body2">
@@ -54,7 +54,7 @@ export default function ({ metadata, ...props }: Props) {
 							</Box>
 
 							{metadata.updated && metadata.updated !== metadata.created && (
-								<Box display="flex" alignItems="center" gap={1}>
+								<Box sx={{ display: "flex", gap: 1, alignItems: "center" }}>
 									<EditCalendarIcon fontSize="small" />
 
 									<Typography variant="body2">

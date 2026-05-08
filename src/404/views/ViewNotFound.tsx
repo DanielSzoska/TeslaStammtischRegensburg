@@ -4,7 +4,7 @@ import Paper from "@mui/material/Paper"
 import Stack from "@mui/material/Stack"
 import Typography from "@mui/material/Typography"
 import { Helmet } from "react-helmet-async"
-import { Link } from "react-router-dom"
+import { Link } from "react-router"
 
 
 export default function () {
@@ -17,8 +17,8 @@ export default function () {
 			</Helmet>
 
 			<Container maxWidth="sm">
-				<Paper elevation={4} style={{ padding: "1.5rem" }}>
-					<Stack direction="column" spacing={2} alignItems="center" component="span" data-nosnippet>
+				<Paper elevation={4} sx={{ padding: "1.5rem" }}>
+					<Stack direction="column" spacing={2} sx={{ alignItems: "center" }} component="span" data-nosnippet>
 						<Typography variant="h3">
 							<b>Seite nicht gefunden</b>
 						</Typography>

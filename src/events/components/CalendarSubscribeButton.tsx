@@ -9,7 +9,7 @@ import MenuItem from "@mui/material/MenuItem"
 import Stack from "@mui/material/Stack"
 import Typography from "@mui/material/Typography"
 import { MouseEvent, useState } from "react"
-import { Link } from "react-router-dom"
+import { Link } from "react-router"
 
 
 const CALENDAR_URL = "webcal://tesla-stammtisch-regensburg.de/download/termine.ics"
@@ -58,7 +58,7 @@ export default function () {
 					onClick={handleClose}
 					disableRipple
 				>
-					<Stack direction="row" alignItems="center" spacing={2}>
+					<Stack direction="row" sx={{ alignItems: "center" }} spacing={2}>
 						<InsertLinkIcon />
 
 						<Typography>
@@ -74,7 +74,7 @@ export default function () {
 					onClick={handleClose}
 					disableRipple
 				>
-					<Stack direction="row" alignItems="center" spacing={2}>
+					<Stack direction="row" sx={{ alignItems: "center" }} spacing={2}>
 						<AppleIcon />
 
 						<Typography>
@@ -90,7 +90,7 @@ export default function () {
 					onClick={handleClose}
 					disableRipple
 				>
-					<Stack direction="row" alignItems="center" spacing={2}>
+					<Stack direction="row" sx={{ alignItems: "center" }} spacing={2}>
 						<GoogleIcon />
 
 						<Typography>
@@ -106,7 +106,7 @@ export default function () {
 					onClick={handleClose}
 					disableRipple
 				>
-					<Stack direction="row" alignItems="center" spacing={2}>
+					<Stack direction="row" sx={{ alignItems: "center" }} spacing={2}>
 						<MicrosoftIcon />
 
 						<Typography>

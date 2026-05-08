@@ -41,7 +41,7 @@ export default function () {
 	if (!post) {
 		return (
 			<Container maxWidth="lg">
-				<Box component={Paper} padding="2rem">
+				<Box component={Paper} sx={{ padding: "2rem" }}>
 					<Box sx={{ minHeight: "200px", display: "flex", justifyContent: "center", alignItems: "center" }}>
 						<CircularProgress size={65} />
 					</Box>
@@ -54,7 +54,7 @@ export default function () {
 		<Container maxWidth="lg">
 			<PostHelmet metadata={post} />
 
-			<Box component={Paper} padding={handy ? "0.5rem" : "2rem"}>
+			<Box component={Paper} sx={{ padding: handy ? "0.5rem" : "2rem" }}>
 				<Post metadata={post} />
 			</Box>
 		</Container>

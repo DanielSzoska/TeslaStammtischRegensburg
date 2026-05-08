@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router"
-import { BrowserRouter } from "react-router-dom"
+import { BrowserRouter } from "react-router"
 import { ViewNotFound } from "./404"
 import { ViewEvents } from "./events"
 import { DefaultLayout } from "./layout"

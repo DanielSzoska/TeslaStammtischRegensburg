@@ -19,7 +19,7 @@ export default function () {
 				<link rel="canonical" href="https://tesla-stammtisch-regensburg.de/" />
 			</Helmet>
 
-			<Box component={Paper} padding={handy ? "0.5rem" : "2rem"}>
+			<Box component={Paper} sx={{ padding: handy ? "0.5rem" : "2rem" }}>
 				<PostList posts={posts} />
 			</Box>
 		</Container>
